@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class Main {
@@ -19,6 +20,15 @@ public class Main {
         LocalDate localDate = LocalDate.now();
         LocalDate localDate1 = LocalDate.of(2023,4,24);
         System.out.println(localDate.getMonth());
+
+        LocalTime localTime = LocalTime.now();
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MMMM-yyyy HH:mm");
+
+
+        System.out.println("LocalDate = " + localDate);
+        System.out.println("LocalTime = " + localTime);
+        System.out.println("LocalDateTime = " + localDateTime);
+        System.out.println(localDateTime.format(dateTimeFormatter));
 
         globalX = 6;
         int localX = 7;
